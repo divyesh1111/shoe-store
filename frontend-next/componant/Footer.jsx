@@ -1,7 +1,9 @@
+
+
 import React from 'react'
 
 const Footer = () => {
-  return <div>footer heyy hhhh</div>
+  return <div>footergfhtkujgfghdhyjg  hhhh</div>
   
 };
 
