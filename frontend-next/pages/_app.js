@@ -1,14 +1,13 @@
+import "@/styles/globals.css";
+import Head from "next/head";
 
-import Footer from '@/componant/Footer'
-import Header from '@/componant/Header'
-import '@/styles/globals.css'
-import Head from 'next/head'
-
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default function App({ Component, pageProps }) {
-  return (
-    <>
-    <Head>
+    return (
+        <>
+            <Head>
                 <title>Online Shoe Store | JS Dev Hindi</title>
                 <meta
                     name="description"
@@ -31,10 +30,8 @@ export default function App({ Component, pageProps }) {
                 />
             </Head>
             <Header />
-            
-    <Component {...pageProps} />
+            <Component {...pageProps} />
             <Footer />
-    </>
-     
-  )
+        </>
+    );
 }
