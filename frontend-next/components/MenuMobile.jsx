@@ -17,9 +17,9 @@ const subMenuData = [
     { id: 4, name: "Football shoes", doc_count: 107 },
 ];
 
-const Menu = ({ showCatMenu, setShowCatMenu }) => {
+const MenuMobile = ({ showCatMenu, setShowCatMenu, setMobileMenu }) => {
     return (
-        <ul className="hidden md:flex items-center gap-8 font-medium text-black">
+        <ul className="flex flex-col md:hidden font-bold absolute top-[50px] left-0 w-full h-[calc(100vh-50px)] bg-white border-t text-black">
             {data.map((item) => {
                 return (
 
@@ -29,14 +29,17 @@ const Menu = ({ showCatMenu, setShowCatMenu }) => {
                                 onMouseEnter={() => setShowCatMenu(true)}
                                 onMouseLeave={() => setShowCatMenu(false)}
                             >
-                                {item.name}
-                                <BsChevronDown size={14} />
+                                <div>
+                                    {item.name}
+                                    <BsChevronDown size={14} />
+                                </div>
+
                                 {showCatMenu && (
                                     <ul className="bg-white absolute top-6 left-0 min-w-[250px] px-1 py-1 text-black shadow-lg">
                                         {subMenuData.map((submenu) => {
                                             return (
 
-                                                <Link key={submenu.id} href="/" onClick={() => setShowCatMenu(false)}>
+                                                <Link key={submenu.id} href="/" onClick={() => { setShowCatMenu(false); setMobileMenu(false) }} >
                                                     <li className="h-12 flex justify-between items-center px-3
                                                      hover:bg-black/[0.03] rounded-md">
                                                         {submenu.name}
@@ -49,7 +52,7 @@ const Menu = ({ showCatMenu, setShowCatMenu }) => {
                                 )}
                             </li>) : (
                             <li className="cursor-pointer">
-                                <Link href={item?.url}>
+                                <Link href={item?.url} onClick={() => setMobileMenu(false)}>
                                     {item.name}
                                 </Link>
                             </li>
@@ -61,4 +64,4 @@ const Menu = ({ showCatMenu, setShowCatMenu }) => {
     )
 }
 
-export default Menu
+export default MenuMobile;

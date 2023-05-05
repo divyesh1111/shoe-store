@@ -4,8 +4,9 @@ import Link from "next/link";
 import Menu from "./Menu";
 import { BsCart } from "react-icons/bs";
 import { IoMdHeartEmpty } from "react-icons/io";
-import { VscChromeClose } from 'react-icons/vsc';
+import { VscChromeClose } from "react-icons/vsc";
 import { BiMenuAltRight } from "react-icons/bi";
+import MenuMobile from "./MenuMobile";
 
 const Header = () => {
     const [mobileMenu, setMobileMenu] = useState(false);
@@ -24,6 +25,10 @@ const Header = () => {
                     <img src="/logo.svg" className="w-[40px] md:w-[60px]" />
                 </Link>
                 <Menu showCatMenu={showCatMenu} setShowCatMenu={setShowCatMenu} />
+
+                {mobileMenu && <MenuMobile showCatMenu={showCatMenu} setShowCatMenu={setShowCatMenu} setMobileMenu={setMobileMenu} />}
+
+
                 <div className="flex ite gap-2 text-black">
                     <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center hover:bg-black/[0.05] cursor-pointer relative ">
                         <IoMdHeartEmpty className="text-[19px] md:text-[24px]" />
@@ -46,13 +51,17 @@ const Header = () => {
                     </div>
                     {/*Icon End */}
                     {/*Mobile Icon Start */}
-                    <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center hover:bg-black/[0.05] cursor-pointer relative -mr-2 " >
+                    <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center hover:bg-black/[0.05] cursor-pointer relative -mr-2 ">
                         {mobileMenu ? (
-                            <VscChromeClose className="text-[16px]"
-                                onClick={() => setMobileMenu(false)} />
+                            <VscChromeClose
+                                className="text-[16px]"
+                                onClick={() => setMobileMenu(false)}
+                            />
                         ) : (
-                            <BiMenuAltRight className="text-[20px]"
-                                onClick={() => setMobileMenu(true)} />
+                            <BiMenuAltRight
+                                className="text-[20px]"
+                                onClick={() => setMobileMenu(true)}
+                            />
                         )}
                     </div>
                     {/*Mobile Icon End */}
