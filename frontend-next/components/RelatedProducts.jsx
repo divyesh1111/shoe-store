@@ -1,5 +1,5 @@
- import React from 'react'
- import Carousel from "react-multi-carousel";
+import React from 'react'
+import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ProductCard from './ProductCard';
 
@@ -22,7 +22,7 @@ import ProductCard from './ProductCard';
 
    return <div className="mt-[50px] md:mt-[100px] mb-[100px] md:mb-0">
     <div className="text-2xl font-bold mb-5">You Might Also Like</div>
-    <Carousel 
+    <Carousel
     responsive={responsive}
       containerClass="-mx-[10px]" itemClass="px-[10px]"
     >
