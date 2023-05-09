@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Wrapper from "./Wrapper";
 import Link from "next/link";
 import Menu from "./Menu";
@@ -10,13 +10,44 @@ import MenuMobile from "./MenuMobile";
 import { fetchDataFromApi } from "@/utils/api";
 
 
-
 const Header = () => {
     const [mobileMenu, setMobileMenu] = useState(false);
     const [showCatMenu, setShowCatMenu] = useState(false);
     const [show, setShow] = useState("translate-y-0");
     const [lastScrollY, setLastScrollY] = useState(0);
     const [categories, setCategories] = useState(null);
+
+    const controlNavbar = () => {
+        if (window.scrollY > 200) {
+            if (window.scrollY > lastScrollY && !mobileMenu) {
+                setShow("-translate-y-[80px]");
+            } else {
+                setShow("shadow-sm");
+            }
+        } else {
+            setShow("translate-y-0");
+        }
+        setLastScrollY(window.scrollY);
+    };
+
+
+    useEffect(() => {
+        window.addEventListener("scroll", controlNavbar);
+        return () => {
+            window.removeEventListener("scroll", controlNavbar);
+        };
+    }, [lastScrollY]);
+
+
+
+    useEffect(() => {
+        fetchCategories();
+    }, []);
+
+    const fetchCategories = async () => {
+        const { data } = await fetchDataFromApi("/api/categories?populate=*");
+        setCategories(data);
+    };
 
     return (
         <div
@@ -26,9 +57,9 @@ const Header = () => {
                 <Link href="/">
                     <img src="/logo.svg" className="w-[40px] md:w-[60px]" />
                 </Link>
-                <Menu showCatMenu={showCatMenu} setShowCatMenu={setShowCatMenu} />
+                <Menu showCatMenu={showCatMenu} setShowCatMenu={setShowCatMenu} categories={categories} />
 
-                {mobileMenu && <MenuMobile showCatMenu={showCatMenu} setShowCatMenu={setShowCatMenu} setMobileMenu={setMobileMenu} />}
+                {mobileMenu && <MenuMobile showCatMenu={showCatMenu} setShowCatMenu={setShowCatMenu} setMobileMenu={setMobileMenu} categories={categories}/>}
 
 
                 <div className="flex ite gap-2 text-black">
