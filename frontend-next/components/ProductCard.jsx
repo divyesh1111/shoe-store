@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { getDiscountedPricePercentage } from '@/utils/helper';
 
@@ -7,7 +7,7 @@ import { getDiscountedPricePercentage } from '@/utils/helper';
 const ProductCard = ({ data: { attributes: p, id } }) => {
 
   return (
-    <Link href={`/products/${p.slug}`}
+    <Link href={`/product/${p.slug}`}
       className="transform overflow-hidden bg-white duration-200 hover:scale-105 cursor-pointer ">
 
 
