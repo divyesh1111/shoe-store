@@ -7,6 +7,9 @@ import { IoMdHeartEmpty } from "react-icons/io";
 import { VscChromeClose } from "react-icons/vsc";
 import { BiMenuAltRight } from "react-icons/bi";
 import MenuMobile from "./MenuMobile";
+import { fetchDataFromApi } from "@/utils/api";
+
+
 
 const Header = () => {
     const [mobileMenu, setMobileMenu] = useState(false);
