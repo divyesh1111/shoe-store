@@ -4,6 +4,7 @@ import Wrapper from "@/components/Wrapper";
 import { fetchDataFromApi } from "@/utils/api";
 
 
+
 export default function Home ({ products }) {
     // traditional method of Java Script to fetch data but not efficient for SEO purpose
     // const [data, setData] = useState(null);
