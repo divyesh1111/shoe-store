@@ -5,29 +5,31 @@ import React from 'react';
 
 
 
+
+
 const about = () => {
     return (
         <main>
             <Wrapper>
                 <div>
-                    <div>
 
-                        <div className="text-center max-w-[800px] mx-auto my-[25px] md:my-[80px]">
-                            <div className="text-[28px] md:text-[34px] mb-5 font-semibold leading-tight">
-                                OUR MISSION IS
+                    <div className="text-center  mx-auto my-[25px] md:my-[80px] z-10 bg-[url('/h.jpg')] bg-contain bg-no-repeat " >
+                        <div className="text-[28px] md:text-[34px] mb-5 font-semibold leading-tight z-20" >
+                            OUR MISSION IS
 
-                            </div>
-                            <div className="text-md md:text-8xl font-extrabold ">
-                                BRING INSPIRATION AND INNOVATION TO EVERY ATHLETE IN THE WORLD
-                            </div>
+                        </div>
+                        <div className="text-md w-4 md:text-6xl font-extrabold z-20 "  >
+
+                            BRING INSPIRATION AND INNOVATION TO EVERY ATHLETE IN THE WORLD
                         </div>
                     </div>
+
 
                     <div className="text-center max-w-[1500px] mx-auto my-[25px] md:my-[80px] z-0">
                         <div className="text-left md:text-7xl font-extrabold ">
                             RUNNING IS A GIFT
                         </div>
-                        <div className="text-left text-[28px] md:text-[34px] mb-5 font-semibold leading-tight pl-60">
+                        <div className="text-left text-[10px] md:text-[34px] mb-5 font-semibold leading-tight pl-60">
                             WITH NIKE
                         </div>
 
@@ -52,7 +54,7 @@ const about = () => {
             </Wrapper>
 
 
-        </main>
+        </main >
     );
 };
 

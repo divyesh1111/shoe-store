@@ -13,7 +13,11 @@ module.exports = {
             oswald: "Oswald, sans-serif",
             urbanist: "Urbanist, sans-serif",
         },
-        extend: {},
+        extend: {
+            backgroundImage: {
+                'hero': "url('/hero.jpg')"
+            }
+        },
     },
     plugins: [],
 };
