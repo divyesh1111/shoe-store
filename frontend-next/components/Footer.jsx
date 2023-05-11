@@ -1,6 +1,8 @@
 import React from "react";
 import { FaFacebookF, FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
 import Wrapper from "./Wrapper";
+import Link from 'next/link';
+import about from './../pages/about';
 
 const Footer = () => {
     return (
@@ -55,9 +57,11 @@ const Footer = () => {
 
                         {/* MENU START */}
                         <div className="flex flex-col gap-3">
-                            <div className="font-oswald font-medium uppercase text-sm">
-                                About nike
-                            </div>
+                            <Link href="/about">
+                                <div className="font-oswald font-medium uppercase text-sm">
+                                    About nike
+                                </div>
+                            </Link>
                             <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
                                 News
                             </div>
