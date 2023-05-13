@@ -6,7 +6,7 @@ import Link from 'next/link';
 const SignIn = () => {
   return (
     <Wrapper>
-        <div className=' text-center mx-auto px-6 py-6 h-[600px] border border-gray-900 rounded-3xl  my-8'>
+        <div className=' text-center mx-auto px-6 py-6 h-[700px] border border-gray-900 rounded-3xl  my-8'>
             <div className=" block font-extrabold text-3xl  m-6">
             {/* <Link href="/"> 
                     <img src="/logo.svg" className="  m-3 items-center w-[40px] " />
