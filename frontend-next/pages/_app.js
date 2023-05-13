@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import store from "@/store/store";
 import { Provider } from "react-redux";
+import Jordan from "@/components/Jordan";
 
 export default function App ({ Component, pageProps }) {
     return (
@@ -29,6 +30,7 @@ export default function App ({ Component, pageProps }) {
 
             </Head>
             <Provider store={store}>
+                <Jordan />
                 <Header />
                 <Component {...pageProps} />
                 <Footer />
