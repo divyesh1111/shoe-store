@@ -10,6 +10,7 @@ import { BiMenuAltRight } from "react-icons/bi";
 import MenuMobile from "./MenuMobile";
 import { fetchDataFromApi } from "@/utils/api";
 import { useSelector } from "react-redux";
+import signup from "@/pages/signup";
 
 
 
@@ -63,13 +64,15 @@ const Jordan = () => {
                     <img src="/jordan.svg" className="w-[10px] md:w-[20px]" />
                 </Link>
                 <div className="justify-end">
-                <button class="bg-transparent  text-black hover:text-black hover:font-bold py-1 px-2  hover:border-transparent rounded">
+            
+                <Link className="bg-transparent  text-black hover:text-black hover:font-bold py-1 px-2  hover:border-transparent rounded" href='signup'>
                     Sign Up 
-                </button>
+                </Link>
+                    
                 <span>|</span>
-                <button class="bg-transparent  text-black hover:text-black hover:font-bold py-1 px-2  hover:border-transparent rounded">
+                <Link class="bg-transparent  text-black hover:text-black hover:font-bold py-1 px-2  hover:border-transparent rounded" href='sign'>
                     Sign In 
-                </button>
+                </Link>
                 
                 </div>
                 

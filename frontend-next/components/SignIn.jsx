@@ -41,7 +41,7 @@ const SignIn = () => {
                     <button type="button" class=" w-80 text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 my-4 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">SIGN IN</button>
                     <div>
                         Not a Member?
-                        <span> <Link href={"/"}className="underline hover:font-semibold" >Join Us. </Link></span>
+                        <span> <Link href={"/signup"}className="underline hover:font-semibold" >Join Us. </Link></span>
                     </div>
             </div>
         </div>
