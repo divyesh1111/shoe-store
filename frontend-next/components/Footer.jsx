@@ -15,12 +15,16 @@ const Footer = () => {
                         <div className="font-oswald font-medium uppercase text-sm cursor-pointer">
                             Find a store
                         </div>
-                        <div className="font-oswald font-medium uppercase text-sm cursor-pointer">
+                        <Link href="/signup">
+                        <div  className="font-oswald font-medium uppercase text-sm cursor-pointer">
                             become a partner
                         </div>
+                        </Link>
+                        <Link href="/signup">
                         <div className="font-oswald font-medium uppercase text-sm cursor-pointer">
                             sign up for email
                         </div>
+                        </Link>
                         <div className="font-oswald font-medium uppercase text-sm cursor-pointer">
                             send us feedback
                         </div>
@@ -34,10 +38,11 @@ const Footer = () => {
                     <div className="flex gap-[50px] md:gap-[75px] lg:gap-[100px] shrink-0">
                         {/* MENU START */}
                         <div className="flex flex-col gap-3">
-                            
+                            <Link href="/help">
                                 <div className="font-oswald font-medium uppercase text-sm">
                                     get help
                                 </div>
+                            </Link>
                             
                             <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
                                 Order Status

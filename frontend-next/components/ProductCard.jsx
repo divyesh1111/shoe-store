@@ -13,7 +13,7 @@ const ProductCard = ({ data: { attributes: p, id } }) => {
       <Image
         width={500}
         height={500}
-
+        loading='lazy'
         src={p.thumbnail.data.attributes.url}
         alt={p.name}
       />
