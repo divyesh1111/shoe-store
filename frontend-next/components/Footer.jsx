@@ -34,9 +34,11 @@ const Footer = () => {
                     <div className="flex gap-[50px] md:gap-[75px] lg:gap-[100px] shrink-0">
                         {/* MENU START */}
                         <div className="flex flex-col gap-3">
-                            <div className="font-oswald font-medium uppercase text-sm">
-                                get help
-                            </div>
+                            
+                                <div className="font-oswald font-medium uppercase text-sm">
+                                    get help
+                                </div>
+                            
                             <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
                                 Order Status
                             </div>
