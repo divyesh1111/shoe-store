@@ -15,7 +15,7 @@ module.exports = {
         },
         extend: {
             backgroundImage: {
-                'hero': "url('/hero.jpg')"
+                'v1': "url('/v1.mp4')"
             }
         },
     },

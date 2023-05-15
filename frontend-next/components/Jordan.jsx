@@ -64,22 +64,22 @@ const Jordan = () => {
                     <img src="/jordan.svg" className="w-[10px] md:w-[20px]" />
                 </Link>
                 <div className="justify-end">
-            
-                <Link className="bg-transparent  text-black hover:text-black hover:font-bold py-1 px-2  hover:border-transparent rounded" href='signup'>
-                    Sign Up 
-                </Link>
-                    
-                <span>|</span>
-                <Link class="bg-transparent  text-black hover:text-black hover:font-bold py-1 px-2  hover:border-transparent rounded" href='sign'>
-                    Sign In 
-                </Link>
-                
+
+                    <Link className="bg-transparent  text-black hover:text-black hover:font-bold py-1 px-2  hover:border-transparent rounded" href='signup'>
+                        Sign Up
+                    </Link>
+
+                    <span>|</span>
+                    <Link className="bg-transparent  text-black hover:text-black hover:font-bold py-1 px-2  hover:border-transparent rounded" href='sign'>
+                        Sign In
+                    </Link>
+
                 </div>
-                
-    
-                
+
+
+
             </Wrapper>
-            
+
         </div>
     );
 };
