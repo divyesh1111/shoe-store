@@ -31,7 +31,7 @@ const SignIn = () => {
                 </label>
             </div>
             <div className="py-3 justify-items-start">
-            <input type="checkbox" checked="default" className=""/>
+            <input type="checkbox" checked="defaultChecked" className=""/>
                 <span> Keep me signed in</span>
             </div>
                 <Link href={"/"} className="text-md text-slate-400">Forget your password?</Link>
