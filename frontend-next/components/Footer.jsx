@@ -2,7 +2,7 @@ import React from "react";
 import { FaFacebookF, FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
 import Wrapper from "./Wrapper";
 import Link from 'next/link';
-import about from './../pages/about';
+import about2 from './../pages/about2';
 
 const Footer = () => {
     return (
@@ -16,14 +16,14 @@ const Footer = () => {
                             Find a store
                         </div>
                         <Link href="/signup">
-                        <div  className="font-oswald font-medium uppercase text-sm cursor-pointer">
-                            become a partner
-                        </div>
+                            <div className="font-oswald font-medium uppercase text-sm cursor-pointer">
+                                become a partner
+                            </div>
                         </Link>
                         <Link href="/signup">
-                        <div className="font-oswald font-medium uppercase text-sm cursor-pointer">
-                            sign up for email
-                        </div>
+                            <div className="font-oswald font-medium uppercase text-sm cursor-pointer">
+                                sign up for email
+                            </div>
                         </Link>
                         <div className="font-oswald font-medium uppercase text-sm cursor-pointer">
                             send us feedback
@@ -43,7 +43,7 @@ const Footer = () => {
                                     get help
                                 </div>
                             </Link>
-                            
+
                             <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
                                 Order Status
                             </div>
@@ -64,7 +64,7 @@ const Footer = () => {
 
                         {/* MENU START */}
                         <div className="flex flex-col gap-3">
-                            <Link href="/about">
+                            <Link href="/about2">
                                 <div className="font-oswald font-medium uppercase text-sm">
                                     About nike
                                 </div>

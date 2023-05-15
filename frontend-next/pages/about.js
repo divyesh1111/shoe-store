@@ -12,9 +12,9 @@ const about = () => {
     return (
         <main>
             <Wrapper>
-                <div className="bg-scroll bg-cover" style={{ backgroundImage: "url(/a1.jpg)" }}>
-                    <div className="text-center  mx-auto my-[25px] md:my-[80px] " >
-                        <div className="text-[2+8px] md:text-[34px] mb-5 font-semibold leading-tight z-20" >
+                <div className="bg-fixed bg-cover bg-no-repeat bg-center md:bg-fixed  text-white  " style={{ backgroundImage: "url(/a3.jpg)" }}>
+                    <div className="text-center  mx-auto" >
+                        <div className="text-[2+8px] md:text-[34px] mb-5 font-semibold leading-tight z-20 underline un" >
                             OUR MISSION IS
 
                         </div>
@@ -50,9 +50,9 @@ const about = () => {
                         </div>
                     </div>
                 </div>
+
+
             </Wrapper>
-
-
         </main >
     );
 };
