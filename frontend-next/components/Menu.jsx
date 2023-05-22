@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 import Link from 'next/link';
 import { BsChevronDown } from 'react-icons/bs';
 
 
 const data = [
     { id: 1, name: "Home", url: "/" },
-    { id: 2, name: "About", url: "/about" },
+    { id: 2, name: "About", url: "/about2" },
     { id: 3, name: "Categories", subMenu: true },
     { id: 4, name: "Contact", url: "/contact" },
 ];
@@ -33,18 +33,18 @@ const Menu = ({ showCatMenu, setShowCatMenu, categories }) => {
                                 <BsChevronDown size={14} />
                                 {showCatMenu && (
                                     <ul className="bg-white absolute top-6 left-0 min-w-[250px] px-1 py-1 text-black shadow-lg">
-                                        {categories?.map(({attributes: c, id}) => {
+                                        {categories?.map(({ attributes: c, id }) => {
                                             return (
 
-                                                <Link key={id} 
-                                                        href={`/category/${c.slug}`} onClick={() => setShowCatMenu(false)}>
+                                                <Link key={id}
+                                                    href={`/category/${c.slug}`} onClick={() => setShowCatMenu(false)}>
                                                     <li className="h-12 flex justify-between items-center px-3
                                                             hover:bg-black/[0.03] rounded-md">
                                                         {c.name}
                                                         <span className='opacity-50 text-sm'>{`(${c.products.data.length})`}</span>
                                                     </li>
                                                 </Link>
-                                            )
+                                            );
                                         })}
                                     </ul>
                                 )}
@@ -56,10 +56,10 @@ const Menu = ({ showCatMenu, setShowCatMenu, categories }) => {
                             </li>
                         )}
                     </React.Fragment>
-                )
+                );
             })}
         </ul>
-    )
-}
+    );
+};
 
-export default Menu
+export default Menu;

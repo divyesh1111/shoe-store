@@ -7,14 +7,14 @@ import React from 'react';
 
 
 
+
 const about = () => {
     return (
         <main>
             <Wrapper>
-                <div>
-
-                    <div className="text-center  mx-auto my-[25px] md:my-[80px] z-10 bg-[url('/h.jpg')] bg-contain bg-no-repeat " >
-                        <div className="text-[28px] md:text-[34px] mb-5 font-semibold leading-tight z-20" >
+                <div className="bg-fixed bg-cover bg-no-repeat bg-center md:bg-fixed  text-white  " style={{ backgroundImage: "url(/a3.jpg)" }}>
+                    <div className="text-center  mx-auto" >
+                        <div className="text-[2+8px] md:text-[34px] mb-5 font-semibold leading-tight z-20 underline un" >
                             OUR MISSION IS
 
                         </div>
@@ -23,7 +23,6 @@ const about = () => {
                             BRING INSPIRATION AND INNOVATION TO EVERY ATHLETE IN THE WORLD
                         </div>
                     </div>
-
 
                     <div className="text-center max-w-[1500px] mx-auto my-[25px] md:my-[80px] z-0">
                         <div className="text-left md:text-7xl font-extrabold ">
@@ -51,9 +50,9 @@ const about = () => {
                         </div>
                     </div>
                 </div>
+
+
             </Wrapper>
-
-
         </main >
     );
 };
