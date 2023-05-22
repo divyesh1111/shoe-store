@@ -1,4 +1,5 @@
 import React from 'react'
+import Typed from 'react-typed';
 
 import Wrapper from './Wrapper';
 import Link from 'next/link';
@@ -14,7 +15,13 @@ const SignUp = () => {
                     SIGN UP
                 </div>
             <div className=" align-middle font-extrabold py-6 text-2xl">
-               BECOME A NIKE MEMBER
+            <Typed
+                    strings={['BECOME A NIKE MEMBER']}
+                    typeSpeed={40}
+                    backSpeed={100}
+                    loop={true}
+                />
+               
             </div>
             <div className="relative text-slate-500">
                 Create your NIKE Member profile and get first access to the <br/> very best of NIKE products, inspiration and community. 
