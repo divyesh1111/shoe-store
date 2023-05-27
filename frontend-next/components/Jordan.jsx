@@ -62,7 +62,7 @@ const Jordan = () => {
         <div className="justify-end">
           <Link
             className="bg-transparent  text-black hover:text-black hover:font-bold py-1 px-2  hover:border-transparent rounded"
-            href="signup"
+            href="register"
           >
             Sign Up
           </Link>
@@ -70,7 +70,7 @@ const Jordan = () => {
           <span>|</span>
           <Link
             className="bg-transparent  text-black hover:text-black hover:font-bold py-1 px-2  hover:border-transparent rounded"
-            href="sign"
+            href="login"
           >
             Sign In
           </Link>
