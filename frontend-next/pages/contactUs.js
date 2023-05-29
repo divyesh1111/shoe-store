@@ -1,12 +1,10 @@
-import ContactUs from '@/components/ContactUs'
+import Contact from '@/components/Contact'
 import React from 'react'
 
-const contactUs = () => {
+export default function contactUs() {
   return (
     <div>
-        <ContactUs />
+        <Contact />
     </div>
   )
 }
-
-export default contactUs
