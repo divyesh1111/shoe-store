@@ -14,9 +14,9 @@ const ProductDetailsCarousel = ({images}) => {
                 className="productCarousel"
             >
                 {images?.map((img)=>(
-                      <img key ={img.id} src={img.attributes.url} alt={img.attributes.name} />
+                        <img key ={img.id} src={img.attributes.url} alt={img.attributes.name} />
                 ))}
-               
+            
                 {/* <img src="/p3.png" />
                 <img src="/p4.png" />
                 <img src="/p5.png" />

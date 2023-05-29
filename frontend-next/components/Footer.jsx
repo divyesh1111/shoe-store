@@ -3,6 +3,8 @@ import { FaFacebookF, FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
 import Wrapper from "./Wrapper";
 import Link from 'next/link';
 import about2 from './../pages/about2';
+import privacy from "@/pages/privacy";
+
 
 const Footer = () => {
     return (
@@ -57,7 +59,7 @@ const Footer = () => {
                                 Payment Options
                             </div>
                             <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
-                                Contact Us
+                            <Link href={`contactUs`}>Contact Us</Link>
                             </div>
                         </div>
                         {/* MENU END */}
@@ -66,7 +68,7 @@ const Footer = () => {
                         <div className="flex flex-col gap-3">
                             <Link href="/about2">
                                 <div className="font-oswald font-medium uppercase text-sm">
-                                    About nike
+                                <Link href={`about2`}>About nike</Link>
                                 </div>
                             </Link>
                             <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
@@ -115,16 +117,16 @@ const Footer = () => {
                 {/* RIGHT START */}
                 <div className="flex gap-2 md:gap-5 text-center md:text-left flex-wrap justify-center">
                     <div className="text-[12px] text-white/[0.5] hover:text-white cursor-pointer">
-                        Guides
+                    <Link href={`guides`}>Guides</Link>
                     </div>
                     <div className="text-[12px] text-white/[0.5] hover:text-white cursor-pointer">
                         Terms of Sale
                     </div>
                     <div className="text-[12px] text-white/[0.5] hover:text-white cursor-pointer">
-                        Terms of Use
+                    <Link href={`termsOfUse`}>Terms of Use</Link>
                     </div>
                     <div className="text-[12px] text-white/[0.5] hover:text-white cursor-pointer">
-                        Privacy Policy
+                        <Link href={`privacy`}>Privacy Policy</Link>
                     </div>
                 </div>
                 {/* RIGHT END */}

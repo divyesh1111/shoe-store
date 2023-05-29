@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "cloudinary": "^1.36.4"
+    "cloudinary": "^1.36.4",
+    "react-icons": "^4.9.0"
   }
 }
