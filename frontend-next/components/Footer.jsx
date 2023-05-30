@@ -2,6 +2,11 @@ import React from "react";
 import {FaFacebookF, FaTwitter, FaYoutube, FaInstagram} from "react-icons/fa";
 import Wrapper from "./Wrapper";
 import Link from "next/link";
+<<<<<<< Updated upstream
+=======
+import about2 from "./../pages/about2";
+import privacy from "@/pages/privacy";
+>>>>>>> Stashed changes
 
 const Footer = () => {
   return (
@@ -55,11 +60,17 @@ const Footer = () => {
               <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
                 Payment Options
               </div>
+<<<<<<< Updated upstream
               <Link href="/contactUs">
                 <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
                   Contact Us
                 </div>
               </Link>
+=======
+              <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
+                <Link href={`contactUs`}>Contact Us</Link>
+              </div>
+>>>>>>> Stashed changes
             </div>
             {/* MENU END */}
 

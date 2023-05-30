@@ -51,11 +51,11 @@ const register = () => {
                 <HiUser size={20} />
               </span>
             </div>
-            {/* {formik.errors.username && formik.touched.username ? (
+            {formik.errors.username && formik.touched.username ? (
               <span className="text-rose-500">{formik.errors.username}</span>
             ) : (
               <></>
-            )} */}
+            )}
 
             <div className={styles.input_group}>
               <input
@@ -69,22 +69,18 @@ const register = () => {
                 <HiAtSymbol size={20} />
               </span>
             </div>
-            {/* {formik.errors.email && formik.touched.email ? (
+            {formik.errors.email && formik.touched.email ? (
               <span className="text-rose-500">{formik.errors.email}</span>
             ) : (
               <></>
-            )} */}
+            )}
 
             <div className={styles.input_group}>
               <input
                 type={`${show.password ? "text" : "password"}`}
                 name="password"
                 placeholder="Password"
-                className={
-                  formik.errors.cpassword && formik.touched.cpassword
-                    ? "border-rose-600 " + styles.input_group
-                    : styles.input_group
-                }
+                className={styles.input_text}
                 {...formik.getFieldProps("password")}
               />
               <span
@@ -94,19 +90,13 @@ const register = () => {
                 <HiFingerPrint size={20} />
               </span>
             </div>
-            {/* {formik.errors.password && formik.touched.password ? (
+            {formik.errors.password && formik.touched.password ? (
               <span className="text-rose-500">{formik.errors.password}</span>
             ) : (
               <></>
-            )} */}
+            )}
 
-            <div
-              className={`${styles.input_group} ${
-                formik.errors.cpassword && formik.touched.cpassword
-                  ? "border-rose-600"
-                  : ""
-              }`}
-            >
+            <div className={styles.input_group}>
               <input
                 type={`${show.cpassword ? "text" : "password"}`}
                 name="cpassword"
@@ -121,11 +111,12 @@ const register = () => {
                 <HiFingerPrint size={20} />
               </span>
             </div>
-            {/* {formik.errors.cpassword && formik.touched.cpassword ? (
+            {formik.errors.cpassword && formik.touched.cpassword ? (
               <span className="text-rose-500">{formik.errors.cpassword}</span>
             ) : (
               <></>
-            )} */}
+            )}
+
             {/* Sign in button */}
             <div className="py-3">
               <button type="submit" className={styles.button}>

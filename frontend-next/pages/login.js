@@ -59,11 +59,11 @@ const Login = () => {
                 <HiAtSymbol size={20} />
               </span>
             </div>
-            {/* {formik.errors.email && formik.touched.email ? (
+            {formik.errors.email && formik.touched.email ? (
               <span className="text-rose-500">{formik.errors.email}</span>
             ) : (
               <></>
-            )} */}
+            )}
 
             <div className={styles.input_group}>
               <input
@@ -77,11 +77,11 @@ const Login = () => {
                 <HiFingerPrint size={20} />
               </span>
             </div>
-            {/* {formik.errors.password && formik.touched.password ? (
+            {formik.errors.password && formik.touched.password ? (
               <span className="text-rose-500">{formik.errors.password}</span>
             ) : (
               <></>
-            )} */}
+            )}
 
             {/* Sign in button */}
             <div>
