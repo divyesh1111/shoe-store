@@ -2,8 +2,7 @@ import React from "react";
 import { FaFacebookF, FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
 import Wrapper from "./Wrapper";
 import Link from 'next/link';
-import about2 from './../pages/about2';
-import privacy from "@/pages/privacy";
+
 
 
 const Footer = () => {
