@@ -11,10 +11,5 @@
     "draftAndPublish": true
   },
   "pluginOptions": {},
-  "attributes": {
-    "termsofuse": {
-      "type": "richtext",
-      "required": true
-    }
-  }
+  "attributes": {}
 }

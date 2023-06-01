@@ -1,8 +1,9 @@
 import React from 'react'
 import Wrapper from './Wrapper'
-import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
+import { ReactMarkdown } from 'react-markdown/lib/react-markdown'
 
-const TermsOfUse = ({tou}) => {
+
+const TermsOfSale = ({tos}) => {
   return (
     <Wrapper>
         <div className='text-center text-2xl md:text-[35px] font-bold py-4'> NIKE TERMS OF USE</div>
@@ -13,7 +14,7 @@ const TermsOfUse = ({tou}) => {
         <br></br>
 
         <ReactMarkdown>
-                                {tou?.tou.data?.attributes?.tou}
+                                {tos?.tos.data?.attributes?.tos}
                             </ReactMarkdown>
 {/* 
         <div className='mt-5'>If you live in any of the following countries or regions, additional terms may apply to you and are viewable at the bottom of these Terms. We display the country/region within the Terms when applicable.  These additional terms override the Terms below to the extent of any inconsistency.</div>
@@ -46,6 +47,4 @@ const TermsOfUse = ({tou}) => {
   )
 }
 
-
-
-export default TermsOfUse
+export default TermsOfSale
