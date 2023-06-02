@@ -4,7 +4,8 @@
   "info": {
     "singularName": "delivery",
     "pluralName": "deliveries",
-    "displayName": "delivery"
+    "displayName": "guest_delivery",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -31,11 +32,6 @@
       "type": "string",
       "required": true
     },
-    "postalcode": {
-      "type": "integer",
-      "required": true,
-      "max": 6
-    },
     "locality": {
       "type": "string",
       "required": true
@@ -44,11 +40,11 @@
       "type": "email",
       "required": true
     },
-    "phone": {
-      "type": "integer",
-      "max": 10,
-      "min": 10,
-      "required": true
+    "phno": {
+      "type": "string",
+      "required": true,
+      "maxLength": 10,
+      "minLength": 10
     }
   }
 }
