@@ -137,7 +137,7 @@ const Footer = () => {
             <Link href={`guides`}>Guides</Link>
           </div>
           <div className="text-[12px] text-white/[0.5] hover:text-white cursor-pointer">
-            Terms of Sale
+          <Link href={`termsOfSale`}>Terms of Sale </Link>
           </div>
           <div className="text-[12px] text-white/[0.5] hover:text-white cursor-pointer">
             <Link href={`termsOfUse`}>Terms of Use</Link>

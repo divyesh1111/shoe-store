@@ -6,7 +6,7 @@ import Image from "next/image";
 import {useSelector} from "react-redux";
 import {loadStripe} from "@stripe/stripe-js";
 import {makePaymentRequest} from "@/utils/api";
-import guest from "./guest";
+
 
 
 const stripePromise = loadStripe(
