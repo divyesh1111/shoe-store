@@ -50,19 +50,19 @@ const guest = () => {
           </div>
         </div>
 
-
-                    {/* login */}
-                    <div className='mt-7 mx-5 text-center'>
-                        <div className='text-2xl font-semibold'>
-                            Enter Your Name And Address
-                        </div>
-                        <div>
-                            <label className="block">
-                             <input
-                                    className="placeholder-gray-500 border border-gray-700 rounded-md   px-2 py-2 my-4 w-80 "
-                                    placeholder="First Name"/>
-                            </label>
-                        </div>
+        {/* login */}
+        <div className="mt-7 mx-5 text-center">
+          <div className="text-2xl font-semibold">
+            Enter Your Name And Address
+          </div>
+          <div>
+            <label className="block">
+              <input
+                className="placeholder-gray-500 border border-gray-700 rounded-md   px-2 py-2 my-4 w-80 "
+                placeholder="First Name"
+              />
+            </label>
+          </div>
 
           <div>
             <label className="block">
@@ -109,14 +109,14 @@ const guest = () => {
             </label>
           </div>
 
-                        <div>
-                            <label className="block">
-                            <input
-                                className="placeholder-gray-500 border border-gray-700 rounded-md   px-2 py-2 my-4 w-80 "
-                                placeholder="Locality"
-                            />
-                            </label>
-                        </div>
+          <div>
+            <label className="block">
+              <input
+                className="placeholder-gray-500 border border-gray-700 rounded-md   px-2 py-2 my-4 w-80 "
+                placeholder="Locality"
+              />
+            </label>
+          </div>
 
           {/* 
                         <div className='lg:flex mr-2'>
@@ -139,49 +139,36 @@ const guest = () => {
 
                         </div> */}
 
+          {/* contact info */}
+          <div className="mt-7 ">
+            <div className="text-2xl font-semibold">
+              What's Your Contat Information ?
+            </div>
+            <div>
+              <label className="block">
+                <input
+                  className="placeholder-gray-500 border border-gray-700 rounded-md  px-2 py-2 my-4 w-80 "
+                  placeholder="Email address"
+                />
+              </label>
+            </div>
 
-                            {/* contact info */}
-                        <div className='mt-7 '>
-                            <div className='text-2xl font-semibold'>
-                                What's Your Contat Information ?
+            <div>
+              <label className="block">
+                <input
+                  className="placeholder-gray-500 border border-gray-700 rounded-md   px-2 py-2 my-4 w-80 "
+                  placeholder="Phone Number"
+                />
+              </label>
+            </div>
+          </div>
 
-                            </div>
-                             <div>
-                                <label className="block">
-                                <input
-                                    className="placeholder-gray-500 border border-gray-700 rounded-md  px-2 py-2 my-4 w-80 "
-                                    placeholder="Email address"
-                                />
-                                </label>
-                            </div>
-                                
-                            <div>
-                                <label className="block">
-                                <input
-                                    className="placeholder-gray-500 border border-gray-700 rounded-md   px-2 py-2 my-4 w-80 "
-                                    placeholder="Phone Number"
-                                />
-                                </label>
-                            </div>  
-
-                        </div>
-
-
-
-                        {/* button submit */}
-                        <div className=''>
-                            <button className="w-full sm:w-[40%] py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75   justify-center"    >
-                                            Continue To Delivery
-                            </button >
-                        </div>
-
-                        
-                    </div>
-
-
-                
-
-            
+          {/* button submit */}
+          <div className="">
+            <button className="w-full sm:w-[40%] py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75   justify-center">
+              Continue To Delivery
+            </button>
+          </div>
         </div>
       </div>
     </Wrapper>
