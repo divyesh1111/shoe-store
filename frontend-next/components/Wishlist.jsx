@@ -1,4 +1,3 @@
-
 import { removeFromWishlist, updateWishlist } from "@/store/wishSlice";
 import Image from "next/image";
 import React from "react";
