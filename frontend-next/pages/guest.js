@@ -41,7 +41,8 @@ const guest = () => {
 
 
                     {/* login */}
-                    <div className='mt-7 mx-5 text-center'>
+                    <div className='mt-7 mx-5 grid md:grid-cols-2 text-center'>
+                        <div>
                         <div className='text-2xl font-semibold'>
                             Enter Your Name And Address
                         </div>
@@ -107,6 +108,7 @@ const guest = () => {
                             />
                             </label>
                         </div>
+                        </div>
 
 
 
@@ -138,7 +140,7 @@ const guest = () => {
 
 
                             {/* contact info */}
-                        <div className='mt-7 '>
+                        <div className=' '>
                             <div className='text-2xl font-semibold'>
                                 What's Your Contat Information ?
 
@@ -161,7 +163,7 @@ const guest = () => {
                                 </label>
                             </div>  
 
-                        </div>
+                        
 
 
 
@@ -171,6 +173,7 @@ const guest = () => {
                                             Continue To Delivery
                             </button >
                         </div>
+                    </div>
 
                         
                     </div>
