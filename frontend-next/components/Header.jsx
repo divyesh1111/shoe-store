@@ -20,6 +20,7 @@ const Header = () => {
     const [categories, setCategories] = useState(null);
 
     const { cartItems } = useSelector((state => state.cart));
+    const { wishItems } = useSelector((state => state.wishlist));
 
     const controlNavbar = () => {
         if (window.scrollY > 200) {
@@ -65,17 +66,19 @@ const Header = () => {
 
                 {mobileMenu && <MenuMobile showCatMenu={showCatMenu} setShowCatMenu={setShowCatMenu} setMobileMenu={setMobileMenu} categories={categories} />}
 
-
+                
                 <div className="flex ite gap-2 text-black">
-                    <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center hover:bg-black/[0.05] cursor-pointer relative ">
-                        <IoMdHeartEmpty className="text-[19px] md:text-[24px]" />
-                        <div
-                            className="h-[14px] md:h-[18px] min-w-[14px] md:min-w-[18px] rounded-full bg-red-600 absolute top-1 left-5 md:left-7
+                <Link href="/wishlist">
+                        <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center hover:bg-black/[0.05] cursor-pointer relative ">
+                            <IoMdHeartEmpty className="text-[19px] md:text-[24px]" />
+                            {wishItems.length > 0 && (<div
+                                className="h-[14px] md:h-[18px] min-w-[14px] md:min-w-[18px] rounded-full bg-red-600 absolute top-1 left-5 md:left-7
                          text-white text-[10px] md:text-[12px] flex justify-center items-center px-[2px] md:px-[5px]"
-                        >
-                            15
+                            >
+                                {wishItems.length}
+                            </div>)}
                         </div>
-                    </div>
+                </Link>
                     <Link href="/cart">
                         <div className="w-8 md:w-12 h-8 md:h-12 rounded-full flex justify-center items-center hover:bg-black/[0.05] cursor-pointer relative ">
                             <BsCart className="text-[15px] md:text-[20px]" />

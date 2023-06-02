@@ -10,6 +10,7 @@ import {useDispatch} from "react-redux";
 import {addToCart} from "@/store/cartSlice";
 import {ToastContainer, toast} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { addToWishlist } from "@/store/wishSlice";
 
 const ProductDetails = ({product, products}) => {
   const [selectedSize, setSelectedSize] = useState();
@@ -29,6 +30,20 @@ const ProductDetails = ({product, products}) => {
       theme: "dark",
     });
   };
+  const wish = () => {
+    toast.success("Succeed! Check your wishlist!", {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
+  };
+
+
   return (
     <div className="w-full md:py-20">
       <ToastContainer />
@@ -128,8 +143,19 @@ const ProductDetails = ({product, products}) => {
             </button>
             {/* add cart end */}
             {/*Wish list start */}
-            <button className="w-full py-4 rounded-full border border-black text-lg font-medium transition-transform active:scale-95 flex items-center justify-center gap-2 hover:opacity-75 mb-10">
-              Whishlist
+            <button className="w-full py-4 rounded-full border border-black text-lg font-medium transition-transform active:scale-95 flex items-center justify-center gap-2 hover:opacity-75 mb-10" onClick={() => {
+                
+                  dispatch(
+                    addToWishlist({
+                      ...product?.data?.[0],
+                      selectedSize,
+                      oneQuantityPrice: p.price,
+                    })
+                  );
+                  wish();
+                
+              }}>
+              Wishlist
             </button>
             {/*wishlist end  */}
 

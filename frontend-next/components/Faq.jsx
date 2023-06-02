@@ -1,7 +1,3 @@
-
-
-
-
 import Wrapper from '@/components/Wrapper'
 import React, { useState } from 'react'
 
