@@ -21,17 +21,19 @@ const guest = () => {
         </div>
 
         {/* deliver it  */}
-        <div className="border-4 border-black rounded-2xl sm:w-[32%] mt-5 ">
-          <div className="flex text-2xl font-bold py-5 ">
-            <TbTruckDelivery size={35} className="mx-5 " />
-            Deliver It
+        <div className="md:flex ">
+          <div className="border-4 border-black rounded-2xl  md:ml-12  sm:w-[32%] mt-5 ">
+            <div className="flex text-2xl font-bold py-5 ">
+              <TbTruckDelivery size={35} className="mx-5 " />
+              Deliver It
+            </div>
           </div>
-        </div>
-        {/* deliver it  */}
-        <div className="border-4 border-black rounded-2xl sm:w-[32%] mt-5 ">
-          <div className="flex text-2xl font-bold py-5 ">
-            <TbTruckDelivery size={35} className="mx-5 " />
-            Deliver It
+          
+          <div className="border-4 border-black rounded-2xl  md:ml-48  sm:w-[32%] mt-5 ">
+            <div className="flex text-2xl font-bold py-5 ">
+              <TbTruckDelivery size={35} className="mx-5 " />
+              Deliver It
+            </div>
           </div>
         </div>
 
@@ -51,71 +53,73 @@ const guest = () => {
         </div>
 
         {/* login */}
-        <div className="mt-7 mx-5 text-center">
-          <div className="text-2xl font-semibold">
-            Enter Your Name And Address
-          </div>
+        <div className="mt-7 mx-5 grid md:grid-cols-2 text-center">
           <div>
-            <label className="block">
-              <input
-                className="placeholder-gray-500 border border-gray-700 rounded-md   px-2 py-2 my-4 w-80 "
-                placeholder="First Name"
-              />
-            </label>
-          </div>
+              <div className="text-2xl font-semibold">
+                Enter Your Name And Address
+              </div>
+              <div>
+                <label className="block">
+                  <input
+                    className="placeholder-gray-500 border border-gray-700 rounded-md   px-2 py-2 my-4 w-80 "
+                    placeholder="First Name"
+                  />
+                </label>
+              </div>
 
-          <div>
-            <label className="block">
-              <input
-                className="placeholder-gray-500 border border-gray-700 rounded-md   px-2 py-2 my-4 w-80 "
-                placeholder="Last Name"
-              />
-            </label>
-          </div>
+              <div>
+                <label className="block">
+                  <input
+                    className="placeholder-gray-500 border border-gray-700 rounded-md   px-2 py-2 my-4 w-80 "
+                    placeholder="Last Name"
+                  />
+                </label>
+              </div>
 
-          <div>
-            <label className="block">
-              <input
-                className="placeholder-gray-500 border border-gray-700 rounded-md   px-2 py-2 my-4 w-80 "
-                placeholder="Address Line 1"
-              />
-            </label>
-          </div>
+              <div>
+                <label className="block">
+                  <input
+                    className="placeholder-gray-500 border border-gray-700 rounded-md   px-2 py-2 my-4 w-80 "
+                    placeholder="Address Line 1"
+                  />
+                </label>
+              </div>
 
-          <div>
-            <label className="block">
-              <input
-                className="placeholder-gray-500 border border-gray-700 rounded-md   px-2 py-2 my-4 w-80 "
-                placeholder="Address Line 2"
-              />
-            </label>
-          </div>
+              <div>
+                <label className="block">
+                  <input
+                    className="placeholder-gray-500 border border-gray-700 rounded-md   px-2 py-2 my-4 w-80 "
+                    placeholder="Address Line 2"
+                  />
+                </label>
+              </div>
 
-          <div>
-            <label className="block">
-              <input
-                className="placeholder-gray-500 border border-gray-700 rounded-md   px-2 py-2 my-4 w-80 "
-                placeholder="Address Line 3"
-              />
-            </label>
-          </div>
+              <div>
+                <label className="block">
+                  <input
+                    className="placeholder-gray-500 border border-gray-700 rounded-md   px-2 py-2 my-4 w-80 "
+                    placeholder="Address Line 3"
+                  />
+                </label>
+              </div>
 
-          <div>
-            <label className="block">
-              <input
-                className="placeholder-gray-500 border border-gray-700 rounded-md   px-2 py-2 my-4 w-80 "
-                placeholder="Postal code"
-              />
-            </label>
-          </div>
+              <div>
+                <label className="block">
+                  <input
+                    className="placeholder-gray-500 border border-gray-700 rounded-md   px-2 py-2 my-4 w-80 "
+                    placeholder="Postal code"
+                  />
+                </label>
+              </div>
 
-          <div>
-            <label className="block">
-              <input
-                className="placeholder-gray-500 border border-gray-700 rounded-md   px-2 py-2 my-4 w-80 "
-                placeholder="Locality"
-              />
-            </label>
+              <div>
+                <label className="block">
+                  <input
+                    className="placeholder-gray-500 border border-gray-700 rounded-md   px-2 py-2 my-4 w-80 "
+                    placeholder="Locality"
+                  />
+                </label>
+              </div>
           </div>
 
           {/* 
@@ -140,7 +144,7 @@ const guest = () => {
                         </div> */}
 
           {/* contact info */}
-          <div className="mt-7 ">
+          <div className=" ">
             <div className="text-2xl font-semibold">
               What's Your Contat Information ?
             </div>
@@ -161,14 +165,18 @@ const guest = () => {
                 />
               </label>
             </div>
+          
+
+              {/* button submit */}
+            <div className="">
+              <button className="w-full sm:w-[40%] py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75   justify-center">
+                Continue To Delivery
+              </button>
+            </div>
           </div>
 
-          {/* button submit */}
-          <div className="">
-            <button className="w-full sm:w-[40%] py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75   justify-center">
-              Continue To Delivery
-            </button>
-          </div>
+
+
         </div>
       </div>
     </Wrapper>
