@@ -5,6 +5,7 @@ const delivery = () => {
   return (
     <div>
       <Delivery />
+      
     </div>
   );
 };
