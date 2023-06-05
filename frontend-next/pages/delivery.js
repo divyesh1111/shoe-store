@@ -6,6 +6,8 @@ const delivery = ({products}) => {
     <div>
       <h1>Delivery Form</h1>
       <Delivery products={products} />
+
+      <Delivery />
     </div>
   );
 };

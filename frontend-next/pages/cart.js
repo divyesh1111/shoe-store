@@ -18,21 +18,7 @@ const Cart = () => {
   const subTotal = useMemo(() => {
     return cartItems.reduce((total, val) => total + val.attributes.price, 0);
   }, [cartItems]);
-  const handlePayment = async () => {
-    try {
-      setLoading(true);
-      const stripe = await stripePromise;
-      const res = await makePaymentRequest("/api/orders", {
-        products: cartItems,
-      });
-      await stripe.redirectToCheckout({
-        sessionId: res.stripeSession.id,
-      });
-    } catch (error) {
-      setLoading(false);
-      console.log(error);
-    }
-  };
+  
 
   return (
     <div className="w-full md:py-20">
@@ -82,7 +68,7 @@ const Cart = () => {
                 {/* BUTTON START */}
                 <button
                   className="w-full py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75 flex items-center gap-2 justify-center"
-                  onClick={handlePayment}
+                  
                 >
                   Checkout
                   {loading && <img src="/spinner.svg" />}
