@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * order router
+ * cart-item router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::order.order');
+module.exports = createCoreRouter('api::cart-item.cart-item');
