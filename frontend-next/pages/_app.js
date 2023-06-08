@@ -2,10 +2,11 @@ import "@/styles/globals.css";
 import Head from "next/head";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import store from "@/store/store";
 import {Provider} from "react-redux";
 import Jordan from "@/components/Jordan";
 import {SessionProvider} from "next-auth/react";
+import {PersistGate} from "redux-persist/integration/react";
+import {store, persistor} from "../store/store";
 
 export default function App({Component, pageProps}) {
   return (
@@ -24,10 +25,12 @@ export default function App({Component, pageProps}) {
       </Head>
       <SessionProvider session={pageProps.session}>
         <Provider store={store}>
-          <Jordan />
-          <Header />
-          <Component {...pageProps} />
-          <Footer />
+          <PersistGate loading={"loading"} persistor={persistor}>
+            <Jordan />
+            <Header />
+            <Component {...pageProps} />
+            <Footer />
+          </PersistGate>
         </Provider>
       </SessionProvider>
     </>
