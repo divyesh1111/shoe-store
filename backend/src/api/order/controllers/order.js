@@ -1,5 +1,5 @@
 ("use strict");
-const stripe = require("stripe")(process.env.STRIPE_KEY);
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 /**
  * order controller
  */
@@ -43,7 +43,7 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
 
       await strapi
         .service("api::order.order")
-        .create({ data: { products, stripeId: session.id } });
+        .create({ data: { product: products, stripeId: session.id } });
 
       return { stripeSession: session };
     } catch (error) {

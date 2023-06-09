@@ -1,6 +1,15 @@
 import React, {useEffect, useState} from "react";
 import Wrapper from "./Wrapper";
 import Link from "next/link";
+import Menu from "./Menu";
+import {BsCart} from "react-icons/bs";
+import {IoMdHeartEmpty} from "react-icons/io";
+import {VscChromeClose} from "react-icons/vsc";
+import {BiMenuAltRight} from "react-icons/bi";
+import MenuMobile from "./MenuMobile";
+import {fetchDataFromApi} from "@/utils/api";
+import {useSelector} from "react-redux";
+// import signup from "@/pages/signup";
 
 const Jordan = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -38,12 +47,19 @@ const Jordan = () => {
         className={`h-[60px] flex justify-between items-center bg-gray-100 `}
       >
         <Link href="/">
-          <img src="/jordan.svg" className="w-[10px] md:w-[20px]" />
+          <Image
+            src="/jordan.svg"
+            width={20}
+            height={20}
+            alt="jordan logo"
+            className="cursor-pointer w-5 h-auto "
+          />
+          {/* <img src="/jordan.svg" className="w-[10px] md:w-[20px]" /> */}
         </Link>
         <div className="justify-end">
           <Link
             className="bg-transparent  text-black hover:text-black hover:font-bold py-1 px-2  hover:border-transparent rounded"
-            href="register"
+            href="/register"
           >
             Sign Up
           </Link>
@@ -51,7 +67,7 @@ const Jordan = () => {
           <span>|</span>
           <Link
             className="bg-transparent  text-black hover:text-black hover:font-bold py-1 px-2  hover:border-transparent rounded"
-            href="login"
+            href="/login"
           >
             Sign In
           </Link>

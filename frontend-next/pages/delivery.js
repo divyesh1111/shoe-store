@@ -15,7 +15,7 @@ const delivery = ({products}) => {
 export async function getServerSideProps() {
   try {
     // Fetch necessary data from Strapi CMS API
-    const response = await fetch("https://your-strapi-api.com/products");
+    const response = await fetch("http://localhost:1337/api/deliveries");
     const products = await response.json();
 
     return {
