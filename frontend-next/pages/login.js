@@ -32,7 +32,7 @@ const Login = () => {
   }
 
   return (
-    <Wrapper className="max-w-[1600px] ">
+    <Wrapper className="max-w-[1600px] @screen lowest:px-[10px] py-[10px] text-sm ">
       <Layout>
         <Head>
           <title>Sign In</title>
@@ -40,7 +40,7 @@ const Login = () => {
 
         <section className="w-3/4 mx-auto flex flex-col gap-10">
           <div className="title">
-            <h1 className="text-black text-4xl  font-bold py-4">Explore</h1>
+            <h1 className="text-black text-4xl font-bold py-4">Explore</h1>
           </div>
 
           {/* form */}
@@ -52,36 +52,50 @@ const Login = () => {
                 type="email"
                 name="email"
                 placeholder="Email"
-                className={styles.input_text}
+                className={
+                  `${styles.input_text}` +
+                  `${
+                    formik.errors.email && formik.touched.email
+                      ? " border-rose-600"
+                      : ""
+                  }`
+                }
                 {...formik.getFieldProps("email")}
               />
               <span className={styles.icon}>
                 <HiAtSymbol size={20} />
               </span>
             </div>
-            {formik.errors.email && formik.touched.email ? (
+            {/* {formik.errors.email && formik.touched.email ? (
               <span className="text-rose-500">{formik.errors.email}</span>
             ) : (
               <></>
-            )}
+            )} */}
 
             <div className={styles.input_group}>
               <input
                 type={`${show ? "text" : "password"}`}
                 name="password"
                 placeholder="Password"
-                className={styles.input_text}
+                className={
+                  `${styles.input_text}` +
+                  `${
+                    formik.errors.password && formik.touched.password
+                      ? " border-rose-600"
+                      : ""
+                  }`
+                }
                 {...formik.getFieldProps("password")}
               />
               <span className={styles.icon} onClick={() => setShow(!show)}>
                 <HiFingerPrint size={20} />
               </span>
             </div>
-            {formik.errors.password && formik.touched.password ? (
-              <span className="text-rose-500">{formik.errors.password}</span>
-            ) : (
-              <></>
-            )}
+            {/* {formik.errors.password && formik.touched.password ? (
+                <span className="text-rose-500">{formik.errors.password}</span>
+              ) : (
+                <></>
+              )} */}
 
             {/* Sign in button */}
             <div>
