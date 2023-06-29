@@ -9,17 +9,12 @@ import {BiMenuAltRight} from "react-icons/bi";
 import MenuMobile from "./MenuMobile";
 import {fetchDataFromApi} from "@/utils/api";
 import {useSelector} from "react-redux";
-import Image from "next/image";
 // import signup from "@/pages/signup";
 
 const Jordan = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
-  const [showCatMenu, setShowCatMenu] = useState(false);
   const [show, setShow] = useState("translate-y-0");
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [categories, setCategories] = useState(null);
-
-  const {cartItems} = useSelector((state) => state.cart);
 
   const controlNavbar = () => {
     if (window.scrollY > 200) {
@@ -41,18 +36,12 @@ const Jordan = () => {
     };
   }, [lastScrollY]);
 
-  useEffect(() => {
-    fetchCategories();
-  }, []);
 
-  const fetchCategories = async () => {
-    const {data} = await fetchDataFromApi("/api/categories?populate=*");
-    setCategories(data);
-  };
+
 
   return (
     <div
-      className={`w-full h-[30px] md:h-[40px] bg-white flex items-center justify-between z-20 sticky top-0 transition-transform duration-300 ${show}`}
+      className={`w-full h-[30px] md:h-[40px] bg-white flex items-center justify-between z-20 sticky top-0 transition-transform duration-500 ${show}`}
     >
       <Wrapper
         className={`h-[60px] flex justify-between items-center bg-gray-100 `}
@@ -89,3 +78,5 @@ const Jordan = () => {
 };
 
 export default Jordan;
+
+
