@@ -55,7 +55,7 @@ export default function About() {
               OUR MISSION IS
             </p>
             <h3 className="text-2xl font-bold tracking-tight text-white sm:text-6xl">
-              BRING INSPIRATION AND INNOVATION TO EVERY ATHLETE IN THE WORLD
+              BRING INSPIRATION AND INNOVATION TO EVERY ATHLETE IN THE WORLDS
             </h3>
           </div>
           <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
