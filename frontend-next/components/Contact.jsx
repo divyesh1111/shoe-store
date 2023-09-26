@@ -3,6 +3,9 @@ import Wrapper from "./Wrapper";
 import {FaMobileAlt} from "react-icons/fa";
 import {RiMessage2Fill} from "react-icons/ri";
 import {MdEmail, MdLocationPin} from "react-icons/md";
+import { Link } from "heroicons-react";
+
+
 
 const Contact = () => {
   return (

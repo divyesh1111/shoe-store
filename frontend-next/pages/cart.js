@@ -1,12 +1,12 @@
 import React, {useMemo, useState} from "react";
+import Image from "next/image";
+import Link from "next/link";
 import Wrapper from "@/components/Wrapper";
 import CartItem from "@/components/CartItem";
-import Link from "next/link";
-import Image from "next/image";
 import {useSelector} from "react-redux";
-import {loadStripe} from "@stripe/stripe-js";
-import {makePaymentRequest} from "@/utils/api";
 
+import {makePaymentRequest} from "@/utils/api";
+import {loadStripe} from "@stripe/stripe-js";
 const stripePromise = loadStripe(
   process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
 );
@@ -18,6 +18,7 @@ const Cart = () => {
   const subTotal = useMemo(() => {
     return cartItems.reduce((total, val) => total + val.attributes.price, 0);
   }, [cartItems]);
+
   const handlePayment = async () => {
     try {
       setLoading(true);
@@ -87,14 +88,6 @@ const Cart = () => {
                   Checkout
                   {loading && <img src="/spinner.svg" />}
                 </button>
-
-                <button
-                  className="w-full py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75 flex items-center gap-2 justify-center"
-                  
-                ><Link href="guest">
-                  Guest Checkout</Link>
-                  {loading && <img src="/spinner.svg" />}
-                </button>
                 {/* BUTTON END */}
               </div>
               {/* SUMMARY END */}
@@ -111,6 +104,7 @@ const Cart = () => {
               width={300}
               height={300}
               className="w-[300px] md:w-[400px]"
+              alt="Empty Cart"
             />
             <span className="text-xl font-bold">Your cart is empty</span>
             <span className="text-center mt-4">

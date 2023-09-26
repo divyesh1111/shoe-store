@@ -75,6 +75,39 @@
 .productCarousel .control-arrow {
   display: none;
 }
+
+/* faqqqqqqq */
+.accordion {
+  width: 500px;
+}
+
+.item {
+  background-color: rgb(243 244 246);
+  margin-bottom: 5px;
+  padding: 10px 20px;
+}
+.title {
+  background-color: rgb(243 244 246);
+  display: block;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.content {
+  background-color: rgb(243 244 246);
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+.content.show {
+  height: auto;
+  max-height: 9999px;
+  transition: all 0.5s cubic-bezier(1, 0, 1, 0);
+}
+
+/* end faqqqqq */
+
 @media screen and (max-width: 767px) {
   .productCarousel.carousel-root {
     flex-direction: column;

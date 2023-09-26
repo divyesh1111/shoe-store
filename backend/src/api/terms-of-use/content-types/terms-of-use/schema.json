@@ -11,10 +11,5 @@
     "draftAndPublish": true
   },
   "pluginOptions": {},
-  "attributes": {
-    "tou": {
-      "type": "richtext",
-      "required": true
-    }
-  }
+  "attributes": {}
 }

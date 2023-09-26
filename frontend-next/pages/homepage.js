@@ -1,5 +1,5 @@
 import React from "react";
-import guest from "./guest";
+import guest from "./delivery";
 import authuser from "./authuser";
 import {getSession, useSession, signOut} from "next-auth/react";
 
