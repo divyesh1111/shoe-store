@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { getDiscountedPricePercentage } from '@/utils/helper';
 
-
+xdeeee
 const ProductCard = ({ data: { attributes: p, id } }) => {
 
   return (
