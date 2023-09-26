@@ -2,7 +2,6 @@ import React from 'react'
 import Wrapper from './Wrapper'
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown'
 
-
 const TermsOfSale = ({tos}) => {
   return (
     <Wrapper>
