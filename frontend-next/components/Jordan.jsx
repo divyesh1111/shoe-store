@@ -11,7 +11,6 @@ import {BiMenuAltRight} from "react-icons/bi";
 import MenuMobile from "./MenuMobile";
 import {fetchDataFromApi} from "@/utils/api";
 import {useSelector} from "react-redux";
-import Image from "next/image";
 
 const Jordan = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
