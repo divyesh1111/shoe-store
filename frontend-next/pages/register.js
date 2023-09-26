@@ -27,7 +27,7 @@ const register = () => {
   }
 
   return (
-    <Wrapper className="max-w-[1600px] ">
+    <Wrapper className="max-w-[1600px] @screen lowest:px-[10px] py-[10px] text-sm ">
       <Layout>
         <Head>
           <title>Sign Up</title>
@@ -44,43 +44,64 @@ const register = () => {
                 type="text"
                 name="Username"
                 placeholder="Username"
-                className={styles.input_text}
+                className={
+                  `${styles.input_text}` +
+                  `${
+                    formik.errors.username && formik.touched.username
+                      ? " border-rose-600"
+                      : ""
+                  }`
+                }
                 {...formik.getFieldProps("username")}
               />
               <span className={styles.icon}>
                 <HiUser size={20} />
               </span>
             </div>
-            {formik.errors.username && formik.touched.username ? (
+            {/* {formik.errors.username && formik.touched.username ? (
               <span className="text-rose-500">{formik.errors.username}</span>
             ) : (
               <></>
-            )}
+            )} */}
 
             <div className={styles.input_group}>
               <input
                 type="email"
                 name="email"
                 placeholder="Email"
-                className={styles.input_text}
+                className={
+                  `${styles.input_text}` +
+                  `${
+                    formik.errors.email && formik.touched.email
+                      ? " border-rose-600"
+                      : ""
+                  }`
+                }
                 {...formik.getFieldProps("email")}
               />
               <span className={styles.icon}>
                 <HiAtSymbol size={20} />
               </span>
             </div>
-            {formik.errors.email && formik.touched.email ? (
+            {/* {formik.errors.email && formik.touched.email ? (
               <span className="text-rose-500">{formik.errors.email}</span>
             ) : (
               <></>
-            )}
+            )} */}
 
             <div className={styles.input_group}>
               <input
                 type={`${show.password ? "text" : "password"}`}
                 name="password"
                 placeholder="Password"
-                className={styles.input_text}
+                className={
+                  `${styles.input_text}` +
+                  `${
+                    formik.errors.password && formik.touched.password
+                      ? " border-rose-600"
+                      : ""
+                  }`
+                }
                 {...formik.getFieldProps("password")}
               />
               <span
@@ -90,18 +111,25 @@ const register = () => {
                 <HiFingerPrint size={20} />
               </span>
             </div>
-            {formik.errors.password && formik.touched.password ? (
+            {/* {formik.errors.password && formik.touched.password ? (
               <span className="text-rose-500">{formik.errors.password}</span>
             ) : (
               <></>
-            )}
+            )} */}
 
             <div className={styles.input_group}>
               <input
                 type={`${show.cpassword ? "text" : "password"}`}
                 name="cpassword"
                 placeholder="Confirm Password"
-                className={styles.input_text}
+                className={
+                  `${styles.input_text}` +
+                  `${
+                    formik.errors.cpassword && formik.touched.cpassword
+                      ? " border-rose-600"
+                      : ""
+                  }`
+                }
                 {...formik.getFieldProps("cpassword")}
               />
               <span
@@ -111,11 +139,11 @@ const register = () => {
                 <HiFingerPrint size={20} />
               </span>
             </div>
-            {formik.errors.cpassword && formik.touched.cpassword ? (
+            {/* {formik.errors.cpassword && formik.touched.cpassword ? (
               <span className="text-rose-500">{formik.errors.cpassword}</span>
             ) : (
               <></>
-            )}
+            )} */}
 
             {/* Sign in button */}
             <div className="py-3">

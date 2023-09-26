@@ -14,6 +14,11 @@ module.exports = {
       oswald: "Oswald, sans-serif",
       urbanist: "Urbanist, sans-serif",
     },
+    extend: {
+      screens: {
+        lowest: "280px", // Custom breakpoint for iPhone XR
+      },
+    },
   },
   plugins: [],
 };

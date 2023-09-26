@@ -1,7 +1,20 @@
 import React, {useEffect, useState} from "react";
 import Wrapper from "./Wrapper";
 import Link from "next/link";
+<<<<<<< HEAD
 import Image from "next/image";
+=======
+import Menu from "./Menu";
+import {BsCart} from "react-icons/bs";
+import {IoMdHeartEmpty} from "react-icons/io";
+import {VscChromeClose} from "react-icons/vsc";
+import {BiMenuAltRight} from "react-icons/bi";
+import MenuMobile from "./MenuMobile";
+import {fetchDataFromApi} from "@/utils/api";
+import {useSelector} from "react-redux";
+import Image from "next/image";
+// import signup from "@/pages/signup";
+>>>>>>> 072253716aef42b6357cb498b301a0b7ca6ef817
 
 const Jordan = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -27,9 +40,6 @@ const Jordan = () => {
       window.removeEventListener("scroll", controlNavbar);
     };
   }, [lastScrollY]);
-
-
-
 
   return (
     <div
@@ -70,5 +80,3 @@ const Jordan = () => {
 };
 
 export default Jordan;
-
-
