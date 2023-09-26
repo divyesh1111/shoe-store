@@ -1,15 +1,7 @@
 import React, {useEffect, useState} from "react";
 import Wrapper from "./Wrapper";
 import Link from "next/link";
-import Menu from "./Menu";
-import {BsCart} from "react-icons/bs";
-import {IoMdHeartEmpty} from "react-icons/io";
-import {VscChromeClose} from "react-icons/vsc";
-import {BiMenuAltRight} from "react-icons/bi";
-import MenuMobile from "./MenuMobile";
-import {fetchDataFromApi} from "@/utils/api";
-import {useSelector} from "react-redux";
-// import signup from "@/pages/signup";
+import Image from "next/image";
 
 const Jordan = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
