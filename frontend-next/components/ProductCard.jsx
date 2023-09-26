@@ -1,15 +1,8 @@
-<<<<<<< HEAD
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { getDiscountedPricePercentage } from '@/utils/helper';
 
-xdeeee
-const ProductCard = ({ data: { attributes: p, id } }) => {
-=======
-import Link from "next/link";
-import Image from "next/image";
-import {getDiscountedPricePercentage} from "@/utils/helper";
->>>>>>> 420f95ae0806989beabda4340f2c12cacd23e2be
 
 const ProductCard = ({data: {attributes: p, id}}) => {
   return (
